@@ -9,7 +9,7 @@
 # install. This key is used for salting of hashes used in auth tokens,
 # CRSF middleware, cookie storage, etc. This should be set identically among
 # instances if used behind a load balancer.
-SECRET_KEY = 'GRIDPOT'
+#SECRET_KEY = 'GRIDPOT'
 # In Django 1.5+ set this to the list of hosts your graphite instances is
 # accessible as. See:
 # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-ALLOWED_HOSTS
@@ -88,7 +88,7 @@ TIME_ZONE = 'America/New_York'
 # Authentication Configuration #
 #####################################
 ## LDAP / ActiveDirectory authentication setup
-#USE_LDAP_AUTH = True
+USE_LDAP_AUTH = True
 #LDAP_SERVER = "ldap.mycompany.com"
 #LDAP_PORT = 389
 #LDAP_USE_TLS = False
@@ -121,7 +121,7 @@ USE_REMOTE_USER_AUTHENTICATION = True
 # By default, there is no security on dashboards - any user can add, change or delete them.
 # This section provides 3 different authorization models, of varying strictness.
 # If set to True, users must be logged in to save or delete dashboards. Defaults to False
-#DASHBOARD_REQUIRE_AUTHENTICATION = True
+DASHBOARD_REQUIRE_AUTHENTICATION = False
 # If set to the name of a user group, dashboards can be saved and deleted by any user in this
 # group. Groups can be set in the Django Admin app, or in LDAP. Defaults to None.
 # NOTE: Ignored if DASHBOARD_REQUIRE_AUTHENTICATION is not set
@@ -129,7 +129,7 @@ USE_REMOTE_USER_AUTHENTICATION = True
 # If set to True, dashboards can be saved or deleted by any user having the appropriate
 # (change or delete) permission (as set in the Django Admin app). Defaults to False
 # NOTE: Ignored if DASHBOARD_REQUIRE_AUTHENTICATION is not set
-#DASHBOARD_REQUIRE_PERMISSIONS = True
+DASHBOARD_REQUIRE_PERMISSIONS = False
 ##########################
 # Database Configuration #
 ##########################
